@@ -68,7 +68,31 @@ console.log(isPalindrome(45673)); // false
  * @return {number}
  */
 var romanToInt = function(s) {
-  //input:
-  //output: 
-  //constraints:
+  //input: a roman numeral (ex: 'III')
+  //output: the input roman numeral converted to integer (ex: 3)
+  /*
+  Symbol       Value
+    I             1
+    V             5
+    X             10
+    L             50
+    C             100
+    D             500
+    M             1000
+  */
+  const key = {
+    'I': 1,
+    'V': 5,
+    'X': 10,
+    'L': 50,
+    'C': 100,
+    'D': 500,
+    'M': 1000
+  };
+
+  if (key[s]) return key[s];
+
+  for (let i = 0; i < s.length; i++) {
+    let count = key[s[0]];
+  };
 };
